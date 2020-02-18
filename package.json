@@ -6,10 +6,10 @@
     "node": "13.6.0",
     "npm": "6.13.4"
   },
-  "homepage": " https://pjdaze.github.io/stephen-mayeux-API/",
+  "homepage": "https://pjdaze.github.io/stephen-mayeux-API/",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "deploy": "gh-pages"
+    "deploy": "gh-pages -d ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
