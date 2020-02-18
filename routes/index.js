@@ -8,6 +8,7 @@ router.get("/", function(req, res) {
 });
 
 router.get("/:values", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   if (req.params.values === "sap-values") {
     let data = [
       {
