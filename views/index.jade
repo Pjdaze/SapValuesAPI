@@ -1,15 +1,19 @@
 extends layout
 
 block content
-  h1 Soap Values API
+  h1 Saponification Values API
+  p Here You can grab values to create you very own lye/potassium Calculator for your website or App.
   h2= values
-  h2 Time Microservice 
   p.red Example Usage
-  code localHost:3000/August 13, 2016
+  code localHost:3000/sap-values
   br
-  code localHost:3000/1450137600
+  code localHost:3000/almond-oil
   br
-  p.red Expected Output Is JSON
+  a(class='button', href='/sap-values') Show All
+  br
+
+  p.red Expected Output Is 
+   span.blue JSON
   br 
   code {"label":"Almond Oil","value":{"LyeSapValue":0.1367,"PotassiumSapValue":0.1925}}
 
