@@ -5,7 +5,7 @@
   "homepage": " https://pjdaze.github.io/stephen-mayeux-API/",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
