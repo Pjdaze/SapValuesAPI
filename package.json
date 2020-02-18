@@ -2,10 +2,14 @@
   "name": "mayeuxapi",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "13.6.0",
+    "npm": "6.13.4"
+  },
   "homepage": " https://pjdaze.github.io/stephen-mayeux-API/",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "deploy": "gh-pages ./bin/www"
+    "deploy": "gh-pages"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
