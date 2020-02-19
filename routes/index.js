@@ -142,13 +142,11 @@ router.get("/:values", (req, res) => {
       },
       {
         label: "Karite Butter",
-        LyeSapValue: 0.1296,
-        PotassiumSapValue: 0.1825
+        value: { LyeSapValue: 0.1296, PotassiumSapValue: 0.1825 }
       },
       {
         label: "Kremelta Vegetable Shortening",
-        LyeSapValue: 0.191,
-        PotassiumSapValue: 0.269
+        value: { LyeSapValue: 0.191, PotassiumSapValue: 0.269 }
       },
       {
         label: "Kukui Nut Oil",
@@ -168,8 +166,7 @@ router.get("/:values", (req, res) => {
       },
       {
         label: "Macadamia Nut Oil ",
-        LyeSapValue: 0.1599,
-        PotassiumSapValue: 0.2252
+        value: { LyeSapValue: 0.1599, PotassiumSapValue: 0.2252 }
       },
       {
         label: "Milk Fat",
@@ -298,6 +295,7 @@ router.get("/:values", (req, res) => {
       label: null,
       value: null || { LyeSapValue: null, PotassiumSapValue: null }
     };
+    res.json(data);
   }
 });
 
