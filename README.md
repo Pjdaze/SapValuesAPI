@@ -7,8 +7,11 @@ clone this repo for app code or go to <a href="https://sapvalues-api.herokuapp.c
 
 <code>
 &gt; git clone https://github.com/Pjdaze/SapValuesAPI.git
+<br>
 &gt; cd SapValuesAPI
+<br>
 &gt; npm install
+<br>
 &gt; npm start
 </code>
 
