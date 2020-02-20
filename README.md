@@ -6,14 +6,14 @@ Getting Started
 clone this repo for app code or go to <a href="https://sapvalues-api.herokuapp.com/">HEROKU APP</a>
 
 <code>
-<ul>
+<ol>
 
-<li>&gt; git clone https://github.com/Pjdaze/SapValuesAPI.git</li>
-<li>&gt; cd SapValuesAPI</li>
-<li>&gt; npm install</li>
-<li>&gt; npm start</li>
+<li> git clone https://github.com/Pjdaze/SapValuesAPI.git</li>
+<li> cd SapValuesAPI</li>
+<li> npm install</li>
+<li> npm start</li>
 
-</ul>
+</ol>
 </code>
 
 Open Source
