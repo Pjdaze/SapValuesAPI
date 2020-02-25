@@ -6,10 +6,9 @@
     "node": "13.6.0",
     "npm": "6.13.4"
   },
-  "homepage": "https://pjdaze.github.io/sapValuesAPI/",
+  "homepage": "https://saponificationvalues.com/",
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "deploy": "gh-pages -d ./bin"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "clean-css": "^4.2.3",
@@ -18,9 +17,8 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "prettier": "^1.19.1"
   },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  }
+  "devDependencies": {}
 }
