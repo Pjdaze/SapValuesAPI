@@ -22,4 +22,14 @@ router.get("/:values", (req, res) => {
   }
 });
 
+router.get("/:label", (req, res) => {
+  if (req.params.label === "label") {
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+    let data = SapValueData;
+    let queryParam = req.query.data;
+    res.json(queryParam);
+    console.log("this is the QUERY", queryParam);
+  }
+});
+
 module.exports = router;
