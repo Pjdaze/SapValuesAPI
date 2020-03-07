@@ -1,15 +1,15 @@
 var express = require("express");
 var router = express.Router();
-var cors = require("cors");
+
 var SapValueData = require("../data/sapValueData");
 
 /* GET home page. */
-router.get("/", cors(corsOptions), function(req, res) {
+router.get("/", function(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.render("index");
 });
 
-router.get("/:values", cors(corsOptions), (req, res) => {
+router.get("/:values", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   if (req.params.values === "sap-values") {
     let data = SapValueData;
@@ -23,7 +23,7 @@ router.get("/:values", cors(corsOptions), (req, res) => {
   }
 });
 
-router.get("/:oil", cors(corsOptions), (req, res) => {
+router.get("/:oil", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   if (req.params.oil === "sap-values/oil") {
     let data = SapValueData.map(x => {
