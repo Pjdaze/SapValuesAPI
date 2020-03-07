@@ -28,26 +28,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-var whitelist = [
-  "https://pjdaze.github.io/simple-lye",
-  "https://pjdaze.github.io/simple-lye/#",
-  "https://pjdaze.github.io",
-  "http://localhost:3000",
-  "https://sapvalues-api.herokuapp.com/sap-values"
-];
-var corsOptions = {
-  origin: function(origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
-};
-
-// Then pass them to cors:
-app.use(cors(corsOptions));
-
 // error handler
 app.use(function(err, req, res) {
   // set locals, only providing error in development
