@@ -22,13 +22,21 @@ router.get("/:values", (req, res) => {
   }
 });
 
-router.get("/:label", (req, res) => {
-  if (req.params.label === "label") {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    let data = SapValueData;
-    let queryParam = req.query.data;
-    res.json(queryParam);
-    console.log("this is the QUERY", queryParam);
+router.get("/:oil", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  if (req.params.oil === "sap-values/oil") {
+    let data = SapValueData.map(x => {
+      return {
+        label: req.params.label
+      };
+    });
+    res.json(data);
+  } else {
+    let data = {
+      label: null,
+      value: null || { LyeSapValue: null, PotassiumSapValue: null }
+    };
+    res.json(data);
   }
 });
 

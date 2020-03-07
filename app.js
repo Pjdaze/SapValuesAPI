@@ -3,6 +3,7 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
@@ -26,6 +27,24 @@ app.use("/users", usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+var whitelist = [
+  "https://pjdaze.github.io/simple-lye/",
+  "https://pjdaze.github.io",
+  "http://localhost:3000"
+];
+var corsOptions = {
+  origin: function(origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
+};
+
+// Then pass them to cors:
+app.use(cors(corsOptions));
 
 // error handler
 app.use(function(err, req, res) {
