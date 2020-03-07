@@ -32,7 +32,8 @@ var whitelist = [
   "https://pjdaze.github.io/simple-lye",
   "https://pjdaze.github.io/simple-lye/#",
   "https://pjdaze.github.io",
-  "http://localhost:3000"
+  "http://localhost:3000",
+  "https://sapvalues-api.herokuapp.com/sap-values"
 ];
 var corsOptions = {
   origin: function(origin, callback) {
