@@ -29,7 +29,8 @@ app.use(function(req, res, next) {
 });
 
 var whitelist = [
-  "https://pjdaze.github.io/simple-lye/",
+  "https://pjdaze.github.io/simple-lye",
+  "https://pjdaze.github.io/simple-lye/#",
   "https://pjdaze.github.io",
   "http://localhost:3000"
 ];
