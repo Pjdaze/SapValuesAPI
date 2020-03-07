@@ -23,26 +23,6 @@ router.get("/:values", (req, res) => {
   }
 });
 
-var whitelist = [
-  "https://pjdaze.github.io/simple-lye",
-  "https://pjdaze.github.io/simple-lye/#",
-  "https://pjdaze.github.io",
-  "http://localhost:3000",
-  "https://sapvalues-api.herokuapp.com/sap-values"
-];
-var corsOptions = {
-  origin: function(origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
-};
-
-// Then pass them to cors:
-router.get(cors(corsOptions));
-
 router.get("/:oil", (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   if (req.params.oil === "sap-values/oil") {
